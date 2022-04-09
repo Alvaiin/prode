@@ -9,11 +9,7 @@ interface IProps{
 
 const CardPais = (props: IProps) => {
 
-    const { nombre, logo, colors } = props.pais;
-
-    const background = {
-        "background": `linear-gradient(90deg,${colors.map((color) => `${color}`)})`
-    }
+    const { nombre, logo } = props.pais;
 
 
     return (
@@ -21,7 +17,7 @@ const CardPais = (props: IProps) => {
             <div className='posicion'>
                 {props.posicion}
             </div>
-            <div className='pais' style={background}>
+            <div className='pais'>
                 <div className='logo' >
                     <img src={logo} alt='afa-logo' style={{ "maxHeight": "50px", "maxWidth": "50px" }} />
                 </div>

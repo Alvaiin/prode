@@ -4,11 +4,19 @@
 }
 
 .grupo .title{
-    font-size: 5em;
+    text-align: center;
+    font-size: 2em;
     color: black;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 .grupo-list {
     padding: 10px 10px 10px 0;
     list-style: none;
+}
+
+.grupo-list li{
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
 }

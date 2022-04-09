@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { paises as data } from '../components/data/paises'
+import { grupos as data } from '../components/data/paises'
+import { Grupo } from '../types/Grupo';
 import { Pais } from '../types/Pais'
 
 
 const useFetchPaises = () => {
 
-    const [state, setState] = useState<{ paises?: Pais[], loading: Boolean }>({ paises: undefined, loading: true });
+    const [state, setState] = useState<{ grupos?: Grupo[], loading: Boolean }>({ grupos: undefined, loading: true });
 
     useEffect(() => {
-        setState({ paises: undefined, loading: true });
+        setState({ grupos: undefined, loading: true });
 
         setTimeout(() => {
-            console.log("fin fetch")
-            setState({ paises: data, loading: false })
-            console.log(data)
-        }, 1500)
+            setState({ grupos: data, loading: false })
+        }, 500)
 
     }, [])
 

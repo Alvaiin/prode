@@ -1,6 +1,7 @@
 .card {
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .posicion {
@@ -15,12 +16,9 @@
 .pais {
     display: flex;
     flex: 7;
-    border-style: solid;
-    border-width: 0px;
-    border-radius: 20px;
     align-items: center;
     padding: 5px 10px 5px 10px;
-    box-shadow: 5px 5px 5px 0px #424242;
+    white-space: normal
 }
 
 .pais .logo{
@@ -31,6 +29,6 @@
 
 .pais .nombre{
     text-align: left;
-    font-size: 2.3em;
-    flex:9
+    font-size: 2em;
+    flex:4
 }
