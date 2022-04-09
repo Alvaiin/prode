@@ -1,0 +1,14 @@
+.grupo {
+    padding: 5px;
+    margin: 5px;
+}
+
+.grupo .title{
+    font-size: 5em;
+    color: black;
+}
+
+.grupo-list {
+    padding: 10px 10px 10px 0;
+    list-style: none;
+}

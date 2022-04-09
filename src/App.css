@@ -1,0 +1,58 @@
+body {
+  margin: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: rgba(9, 33, 209, 0.7); */
+  background-image: url("https://www.eluniverso.com/resizer/wPFlXjCt36IHjxQN8ct6Te2typs=/1190x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/B6JUIW7N2RFNPNB25OTWJJTPBI.jpg");
+  font-family: 'Secular One', sans-serif;
+}
+
+
+.App {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(255,255,255,0.5);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+@media (min-width: 1000px){
+  .App {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+/* hebrew */
+@font-face {
+  font-family: 'Secular One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/secularone/v10/8QINdiTajsj_87rMuMdKyqDgOOhLLA.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Secular One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/secularone/v10/8QINdiTajsj_87rMuMdKyqDsOOhLLA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Secular One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/secularone/v10/8QINdiTajsj_87rMuMdKyqDiOOg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
