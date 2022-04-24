@@ -4,6 +4,5 @@ export interface Predicciones {
 }
 
 export interface Prediccion {
-    id: string,
-    posicion: number
+    id: string
 }

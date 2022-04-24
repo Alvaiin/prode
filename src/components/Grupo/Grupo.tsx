@@ -19,7 +19,7 @@ interface IProps {
 const Grupo = (props: IProps) => {
 
   const { id } = props;
-  const [pred, setPred] = useState(props.predicciones.posiciones.sort((a,b)=> a.posicion - b.posicion))
+  const [pred, setPred] = useState(props.predicciones.posiciones)
 
   const reorder = (list: Prediccion[], startIndex: number, endIndex: number) => {
     const result = [...list]

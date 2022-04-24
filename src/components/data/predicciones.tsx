@@ -4,153 +4,121 @@ export const predicciones: Predicciones[] = [
     {
         grupo: "A",
         posiciones: [{
-            id: "QAT",
-            posicion: 2
+            id: "QAT"
         },
         {
-            id: "ECU",
-            posicion: 4
+            id: "ECU"
         },
         {
-            id: "SEN",
-            posicion: 3
+            id: "SEN"
         },
         {
-            id: "HOL",
-            posicion: 1
+            id: "HOL"
         }]
     },
     {
         grupo: "B",
         posiciones: [{
-            id: "ING",
-            posicion: 4
+            id: "ING"
         },
         {
-            id: "IRA",
-            posicion: 3
+            id: "IRA"
         },
         {
-            id: "USA",
-            posicion: 1
+            id: "USA"
         },
         {
-            id: "UND1",
-            posicion: 2
+            id: "UND1"
         }]
     },
     {
         grupo: "C",
         posiciones: [{
-            id: "ARG",
-            posicion: 1
+            id: "ARG"
         },
         {
-            id: "MEX",
-            posicion: 2
+            id: "MEX"
         },
         {
-            id: "POL",
-            posicion: 3
+            id: "POL"
         },
         {
-            id: "SAU",
-            posicion: 4
+            id: "SAU"
         }]
     },
     {
         grupo: "D",
         posiciones: [{
-            id: "FRA",
-            posicion: 1
+            id: "FRA"
         },
         {
-            id: "UND2",
-            posicion: 2
+            id: "UND2"
         },
         {
-            id: "DIN",
-            posicion: 3
+            id: "DIN"
         },
         {
-            id: "TUN",
-            posicion: 4
+            id: "TUN"
         }]
     },
     {
         grupo: "E",
         posiciones: [{
-            id: "ESP",
-            posicion: 1
+            id: "ESP"
         },
         {
-            id: "UND3",
-            posicion: 2
+            id: "UND3"
         },
         {
-            id: "ALE",
-            posicion: 3
+            id: "ALE"
         },
         {
-            id: "JAP",
-            posicion: 4
+            id: "JAP"
         }]
     },
     {
         grupo: "F",
         posiciones: [{
-            id: "BEL",
-            posicion: 1
+            id: "BEL"
         },
         {
-            id: "CAN",
-            posicion: 2
+            id: "CAN"
         },
         {
-            id: "MAR",
-            posicion: 3
+            id: "MAR"
         },
         {
-            id: "CRO",
-            posicion: 4
+            id: "CRO"
         }]
     },
     {
         grupo: "G",
         posiciones: [{
-            id: "BRA",
-            posicion: 1
+            id: "BRA"
         },
         {
-            id: "SER",
-            posicion: 2
+            id: "SER"
         },
         {
-            id: "SUI",
-            posicion: 3
+            id: "SUI"
         },
         {
-            id: "CAM",
-            posicion: 4
+            id: "CAM"
         }]
     },
     {
         grupo: "H",
         posiciones: [{
-            id: "POR",
-            posicion: 1
+            id: "POR"
         },
         {
-            id: "GHA",
-            posicion: 2
+            id: "GHA"
         },
         {
-            id: "URU",
-            posicion: 3
+            id: "URU"
         },
         {
-            id: "COR",
-            posicion: 4
+            id: "COR"
         }]
     },
 ]
