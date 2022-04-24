@@ -13,7 +13,8 @@ const useFetchPaises = () => {
 
         setTimeout(() => {
             setState({ grupos: data, loading: false })
-        }, 500)
+        }, 1000)
+        // setState({ grupos: data, loading: false })
 
     }, [])
 

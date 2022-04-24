@@ -1,27 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautiful-dnd';
 import { Pais } from '../../types/Pais';
+import { Prediccion, Predicciones } from '../../types/Prediccion';
+import { ensure } from '../../utils/arrayUtils';
 import CardPais from '../CardPais/CardPais';
 import './styles.css';
 
 
+
 interface IProps {
   paises: Pais[],
-  id: string
+  id: string,
+  predicciones: Predicciones;
+  callBack: (id: string,pred: Prediccion[]) => void;
 }
 
 
 const Grupo = (props: IProps) => {
 
   const { id } = props;
-  const [paises, setPaises] = useState(props.paises)
+  const [pred, setPred] = useState(props.predicciones.posiciones.sort((a,b)=> a.posicion - b.posicion))
 
-  const reorder = (list: Pais[], startIndex: number, endIndex: number) => {
+  const reorder = (list: Prediccion[], startIndex: number, endIndex: number) => {
     const result = [...list]
     var [removed] = result.splice(startIndex, 1);
     result.splice(endIndex, 0, removed);
     return result
   }
+
 
   const onDragEnd = (res: DropResult) => {
     const { source, destination } = res;
@@ -29,25 +35,31 @@ const Grupo = (props: IProps) => {
       return
     if (source.index === destination.index && source.droppableId === destination.droppableId)
       return
-    setPaises((prevPaises) => reorder(paises, source.index, destination.index));
+    setPred(reorder(pred, source.index, destination.index));
 
   }
+
+  useEffect(() => {
+    props.callBack(id,pred)
+  }, [pred])
+  
+  
   return (
-    <div className='grupo'>
+    <div className={`grupo`}>
       <div className='title'>GRUPO {id}</div>
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId={id}>
           {(droppableProvided) => (
             <ul className='grupo-list' {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
-              {paises.map((pais, index) => {
+              {pred.map((pred, index) => {
                 return (
-                    <Draggable draggableId={pais.id} key={pais.id} index={index}>
-                      {(draggableProvided) => (
-                        <li ref={draggableProvided.innerRef} {...draggableProvided.draggableProps} {...draggableProvided.dragHandleProps}>
-                          <CardPais pais={pais} posicion={index + 1} />
-                        </li>
-                      )}
-                    </Draggable>
+                  <Draggable draggableId={pred.id} key={pred.id} index={index}>
+                    {(draggableProvided) => (
+                      <li ref={draggableProvided.innerRef} {...draggableProvided.draggableProps} {...draggableProvided.dragHandleProps}>
+                        <CardPais pais={ensure(props.paises.find((pais) => pred.id === pais.id))} posicion={index + 1}/>
+                      </li>
+                    )}
+                  </Draggable>
                 )
               })}
               {droppableProvided.placeholder}
