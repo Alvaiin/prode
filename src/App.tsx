@@ -43,7 +43,7 @@ function App() {
     let predictions = JSON.stringify(predicciones);
     // console.log("predicciones: ", predictions);
     // console.log("Encoded predictions: ", encodeURIComponent(predictions));
-    navigator.clipboard.writeText("http://localhost:3000/?predictions="+encodeURIComponent(predictions))
+    navigator.clipboard.writeText("https://alvaiin.github.io/prode/?predictions="+encodeURIComponent(predictions))
   }
 
   return (
